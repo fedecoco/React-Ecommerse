@@ -43,5 +43,7 @@
    }
    
    export const getProductsByCategory = (categoryId) => {
-     // código para obtener productos por categoría
-   }
+    return new Promise((resolve, reject) => {
+      
+    });
+  };

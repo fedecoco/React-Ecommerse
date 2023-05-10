@@ -1,5 +1,5 @@
-import CartWidget from "../CartWidget";
 import "./NavBar.css"
+import CartWidget from "../CartWidget";
 import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -15,8 +15,6 @@ const NavBar = () => {
             <NavLink to={'/category/portatiles'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Portatiles </NavLink>
             <button><CartWidget/></button>
         </div>
-        
-        
     </nav>
 );
 };
