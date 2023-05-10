@@ -1,4 +1,42 @@
 .navbar{
+    background-color: #1d1d1d;
+    color: #fff;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+  
 }
+nav h3 {
+    font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  }
+  
+  nav button {
+    background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+
+
+  
+  nav button:hover {
+    color: #ff8800;
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar button:last-child {
+    margin-right: 0;
+  }
