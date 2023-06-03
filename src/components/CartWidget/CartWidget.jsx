@@ -1,13 +1,23 @@
 import imagenes from "../assents/imagenes"
 import "./cartwidget.css"
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-    return (
-        <div >
-            <p className="cartwidget__carrito"> <img src={imagenes.img } style={{width: "30px"}} />0</p>
-            
-        </div>
-    )
-}
+  const { totalQuantity } = useContext(CartContext);
 
-export default CartWidget
+  return (
+    <Link to="/cart" className="CartWidget">
+      <img
+        className="CartImg"
+        src={imagenes.img}
+        style={{ width: "30px" }}
+        alt="Cart"
+      />
+      {totalQuantity}
+    </Link>
+  );
+};
+
+export default CartWidget;

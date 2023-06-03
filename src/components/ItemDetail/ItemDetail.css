@@ -1,0 +1,104 @@
+.CardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .Header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .ItemHeader {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .ItemImg {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .Info {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .ItemFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .Option, .Option--finishPurchase {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .Option--finishPurchase {
+    background-color: rgb(2, 4, 2);
+  }
+  
+  .Option:hover, .Option--finishPurchase:hover {
+    background-color: orange;
+  }
+  
+  .Contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .Button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .Button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .Button--increment {
+    border-radius: 50% 0 0 50%;
+  }
+  
+  .Button--decrement {
+    border-radius: 0 50% 50% 0;
+  }
+  
+  .Button--reset {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  .Button--addToCart {
+    background-color: rgb(12, 14, 12);
+    color: white;
+  }
+  
+  .Button:hover {
+    background-color: orange;
+  }

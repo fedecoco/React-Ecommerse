@@ -1,0 +1,35 @@
+.Button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .Button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .Button--increment {
+    border-radius: 50% 0 0 50%;
+  }
+  
+  .Button--decrement {
+    border-radius: 0 50% 50% 0;
+  }
+  
+  .Button--reset {
+    background-color: rgb(18, 17, 17);
+    color: white;
+  }
+  
+  .Button--addToCart {
+    background-color: rgb(13, 14, 13);
+    color: white;
+  }
+
+  .Button:hover {
+    color: orange;
+  }

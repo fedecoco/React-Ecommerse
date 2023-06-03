@@ -16,6 +16,14 @@
   margin: 0;
 }
 
+.Logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
 .Categories {
   display: flex;
   align-items: center;

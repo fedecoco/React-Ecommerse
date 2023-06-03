@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
     <nav className="NavBar">
       <Link to='/'>  
-      <h3> EComerce</h3>
+      <h3 className="Logo">Alta Fidelidad</h3>
       </Link>  
         <div className="Categories">
             <NavLink to={'/'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Inicio </NavLink>
@@ -17,7 +17,7 @@ const NavBar = () => {
         </div>
     </nav>
 );
-};
+}
 
 export default NavBar ;
 

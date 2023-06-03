@@ -2,14 +2,15 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 
 
-const ItemList = ({ products }) => {
-  
+const ItemList = ({ items }) => {
+  console.log(items); // Agrega esta línea para verificar que se estén recibiendo los productos correctamente
   return (
     <div className="item-list">
-      {products.map(producto =>  
-          <Item 
-            key={producto.id} {...producto}/>)}
-           
+      {items.length === 0 ? (
+        <p>No se encontraron productos.</p>
+      ) : (
+        items.map((item) => <Item key={item.id} {...item} />)
+      )}
     </div>
   );
 };
