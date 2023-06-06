@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
-import { db } from "../service/firebase/firebaseConfig";
+
 import { CartContext } from "../../context/CartContext";
 import Contador from "../Contador/Contador";
+import db from '../service/firebase/firebaseConfig';
 
 const ItemDetailContainer = () => {
     const { addItem } = useContext(CartContext);

@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
-
 import { CartContext } from '../../context/CartContext';
-import { db } from '../service/firebase/firebaseConfig';
+import db from '../service/firebase/firebaseConfig';
+
+
 import {
   collection,
   writeBatch,
@@ -12,15 +13,14 @@ import {
   Timestamp,
 } from 'firebase/firestore';
 
-import CheckoutForm from '../CheckoutForm.js/CheckoutForm'; 
-import { addDoc } from "firebase/firestore";
-
+import CheckoutForm from '../CheckoutForm.js/CheckoutForm';
+import { addDoc } from 'firebase/firestore';
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
   const [orderId, setOrderId] = useState('');
 
-  const { cart, total, clearCart } = useContext(CartContext);
+  const { cartItems, total, clearCart } = useContext(CartContext);
 
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
@@ -32,7 +32,7 @@ const Checkout = () => {
           phone,
           email,
         },
-        items: cart,
+        items: cartItems,
         total: total,
         date: Timestamp.fromDate(new Date()),
       };
@@ -40,17 +40,17 @@ const Checkout = () => {
 
       const outOfStock = [];
 
-      const ids = cart.map((prod) => prod.id);
+      const ids = cartItems.map((prod) => prod.id);
 
-      const productsRef = collection(db, 'products');
+      const productsRef = collection(db, 'items');
 
       const productsAddedFromFirestore = await getDocs(
-        query(productsRef, where(doc('id'), 'in', ids))
+        query(productsRef, where('id', 'in', ids))
       );
 
       productsAddedFromFirestore.forEach((doc) => {
         const product = doc.data();
-        const item = cart.find((item) => item.id === doc.id);
+        const item = cartItems.find((item) => item.id === doc.id);
 
         if (product.stock >= item.quantity) {
           batch.update(doc.ref, { stock: product.stock - item.quantity });

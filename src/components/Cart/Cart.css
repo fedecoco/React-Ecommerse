@@ -1,0 +1,10 @@
+
+.Borrar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+ 

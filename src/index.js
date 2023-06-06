@@ -1,10 +1,10 @@
 import React from 'react';
 import { initializeApp } from "firebase/app";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CartProvider from './context/CartContext';
+import CartContextProvider from './context/CartContext';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDXfvTJ2SEmzqM7tKV5C2tcJx1jB58JycU",
@@ -18,14 +18,15 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const rootElement = document.getElementById('root');
+ReactDOM.render(
   <React.StrictMode>
-    <CartProvider> 
+    <CartContextProvider>
       <App />
-    </CartProvider>
-  </React.StrictMode>
+    </CartContextProvider>
+  </React.StrictMode>,
+  rootElement
 );
 
-
 reportWebVitals();
+

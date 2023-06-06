@@ -37,7 +37,7 @@ const Cart = () => {
             <img src={item.image} alt={item.title} style={{ width: "100px" }} />
             <p>Precio: ${item.price}</p>
             <p>Cantidad: {item.quantity}</p> {/* Actualizado: Usar item.quantity en lugar de item.count */}
-            <button onClick={() => handleRemoveItem(item.id)}>Borrar</button>
+            <button onClick={() => handleRemoveItem(item.id)} className="Borrar">Borrar</button>
           </div>
         ))}
         <h3>Total: ${getTotal()}</h3>

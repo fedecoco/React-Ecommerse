@@ -17,13 +17,3 @@ const ItemList = ({ items }) => {
 
 export default ItemList;
 
-/* 
-            img={producto.img}
-            stock={producto.stock}
-            description={producto.description}
-            price={producto.price}
-            title={producto.title}
-          />
-        );
-      })}
-      */
